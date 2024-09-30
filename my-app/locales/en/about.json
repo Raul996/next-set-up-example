@@ -1,0 +1,8 @@
+{
+  "title": "About",
+  "greating": "Welcome to about page",
+  "message": "My name is Raul, I'm a front end developer",
+  "skills": "Skills: React, Next, nodeJs, Kubernetes, Docekr, AWS",
+  "address": "Address: Barcelona, Spain (it'a a lie, but I live here)",
+  "metatitle": "About the best developer ever"
+}

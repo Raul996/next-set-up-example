@@ -1,0 +1,54 @@
+.page {
+  display: flex;
+  align-items: flex-start;
+  justify-items: center;
+  flex-direction: column;
+  padding: 80px;
+  gap: 1rem;
+  font-family: var(--font-geist-sans);
+
+  border: 3px solid green;
+  border-radius: 20px;
+
+  max-width: 1200px;
+  margin: 5rem auto;
+
+  .title {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin: 0 auto;
+  }
+
+  .post {
+    display: flex;
+    align-items: flex-start;
+    justify-items: center;
+    flex-direction: column;
+    margin-top: .5rem;
+
+    :hover {
+      animation: bigger .3s ease-in-out forwards;
+      text-decoration: underline;
+    }
+
+    ::before {
+      content: counter(list-item) ". ";
+      counter-increment: list-item;
+      font-weight: 700;
+    }
+
+
+    @keyframes bigger {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+

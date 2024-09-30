@@ -1,0 +1,112 @@
+
+
+// creating the container style
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba($gray-rgb, 0.08);
+  --gray-alpha-100: rgba($gray-rgb, 0.05);
+
+  // usually for the a page layout grid is the best solution, even in this case is not doing very much
+  display: grid;
+  grid-template-rows: 20px 40px 20px;
+  align-items: start;
+  justify-items: center;
+  max-height: 100svh;
+  padding: 80px;
+  gap: 1rem;
+  font-family: var(--font-geist-sans);
+
+  border: 3px solid green;
+  border-radius: 20px;
+
+  max-width: 1200px;
+  max-height: 600px;
+  margin: 5rem auto;
+}
+
+// creating the title style
+.title {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 800;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+// creating the about text style
+.aboutText {
+  font-size: 18px;
+  line-height: 27px;
+  animation: slideIn 1s ease-in-out forwards;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:nth-child(odd) {
+    background: var(--gray-alpha-100);
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.devider {
+  width: calc(100% - 40px);
+  height: 1px;
+  background: green;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.link {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 800;
+
+  &:hover {
+    // making the button bigger on hover effect in 1 second
+    animation: wiggle 1s ease-in-out forwards;
+  }
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  30% {
+    transform: rotateZ(10deg);
+  }
+  45% {
+    transform: rotateZ(-5deg);
+  }
+  60% {
+    transform: rotateZ(3deg);
+  }
+  75% {
+    transform: rotateZ(-2deg);
+  }
+  90% {
+    transform: rotateZ(1deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

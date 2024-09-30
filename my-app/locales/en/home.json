@@ -1,0 +1,6 @@
+{
+  "header": "Welcome to Next.js! example",
+  "about": "About (Static Page)",
+  "home": "Home",
+  "posts": "Posts (SSR)"
+}
