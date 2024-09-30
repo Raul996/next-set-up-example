@@ -10,6 +10,7 @@ const nextConfig = {
   sassOptions: {
     implementation: "sass-embedded",
   },
+  distDir: "public",
 };
 
 export default nextConfig;
